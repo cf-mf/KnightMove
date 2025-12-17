@@ -3,6 +3,6 @@
     internal enum Cor
     {
         Branca,
-        Amarela
+        Preta
     }
 }
