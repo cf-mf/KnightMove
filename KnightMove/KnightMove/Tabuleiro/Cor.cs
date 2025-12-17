@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace KnightMove.Tabuleiro
+﻿namespace Tabuleiro
 {
-    internal class Cor
+    internal enum Cor
     {
+        Branca,
+        Amarela
     }
 }
