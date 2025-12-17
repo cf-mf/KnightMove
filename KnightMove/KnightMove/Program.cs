@@ -1,5 +1,6 @@
 ﻿using KnightMove.Xadrez;
 using Tabuleiro;
+using Xadrez;
 
 namespace KnightMove
 {
@@ -9,15 +10,22 @@ namespace KnightMove
         {
             try
             {
+                char a = 'a';
+                int num = a;
+                Console.WriteLine(num);
 
-            
-            Tabuleiro.Tabuleiro tabuleiro = new Tabuleiro.Tabuleiro(8, 8);
+                PosicaoXadrez posicao = new PosicaoXadrez('c', 7);
 
-            tabuleiro.ColocarPeca(new Posicao(0, 0), new Torre(Cor.Branca, tabuleiro));
-            tabuleiro.ColocarPeca(new Posicao(0, 3), new Torre(Cor.Branca, tabuleiro));
-            tabuleiro.ColocarPeca(new Posicao(2, 2), new Torre(Cor.Branca, tabuleiro));
+                Console.WriteLine(posicao);
+                Console.WriteLine(posicao.ToPosicao());
 
-            Tela.ImprimirTabuleiro(tabuleiro);
+                Tabuleiro.Tabuleiro tabuleiro = new Tabuleiro.Tabuleiro(8, 8);
+
+                tabuleiro.ColocarPeca(new Posicao(0, 0), new Torre(Cor.Branca, tabuleiro));
+                tabuleiro.ColocarPeca(new Posicao(0, 3), new Torre(Cor.Branca, tabuleiro));
+                tabuleiro.ColocarPeca(new Posicao(2, 2), new Rei(Cor.Branca, tabuleiro));
+
+                Tela.ImprimirTabuleiro(tabuleiro);
             }
             catch (TabuleiroException ex)
             {
