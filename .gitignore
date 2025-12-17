@@ -52,3 +52,138 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+##############################
+# Visual Studio
+##############################
+
+.vs/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+
+##############################
+# Build Results
+##############################
+
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+ARM/
+ARM64/
+bld/
+msbuild.log
+
+##############################
+# .NET
+##############################
+
+*.dll
+*.exe
+*.pdb
+*.cache
+*.deps.json
+*.runtimeconfig.json
+
+##############################
+# NuGet
+##############################
+
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.assets.json
+
+##############################
+# ASP.NET
+##############################
+
+wwwroot/lib/
+appsettings.Development.json
+appsettings.Local.json
+
+##############################
+# Testes
+##############################
+
+TestResults/
+coverage/
+coverage.cobertura.xml
+
+##############################
+# Logs
+##############################
+
+*.log
+
+##############################
+# Publicação
+##############################
+
+publish/
+PublishProfiles/
+
+##############################
+# Ferramentas
+##############################
+
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+
+##############################
+# Rider
+##############################
+
+.idea/
+
+##############################
+# VS Code
+##############################
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+##############################
+# Windows
+##############################
+
+Thumbs.db
+Desktop.ini
+
+##############################
+# MacOS
+##############################
+
+.DS_Store
+
+##############################
+# Unity (se aplicável)
+##############################
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+UserSettings/
+
+##############################
+# Outros
+##############################
+
+*.tmp
+*.bak
+*.swp
