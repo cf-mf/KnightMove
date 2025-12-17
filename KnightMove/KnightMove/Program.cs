@@ -10,22 +10,21 @@ namespace KnightMove
         {
             try
             {
-                char a = 'a';
-                int num = a;
-                Console.WriteLine(num);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                PosicaoXadrez posicao = new PosicaoXadrez('c', 7);
+                while (!partida.Terminada)
+                {
+                    Console.Clear();
+                    Tela.ImprimirTabuleiro(partida.Tab);
 
-                Console.WriteLine(posicao);
-                Console.WriteLine(posicao.ToPosicao());
+                    Console.WriteLine();
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
 
-                Tabuleiro.Tabuleiro tabuleiro = new Tabuleiro.Tabuleiro(8, 8);
-
-                tabuleiro.ColocarPeca(new Posicao(0, 0), new Torre(Cor.Branca, tabuleiro));
-                tabuleiro.ColocarPeca(new Posicao(0, 3), new Torre(Cor.Branca, tabuleiro));
-                tabuleiro.ColocarPeca(new Posicao(2, 2), new Rei(Cor.Amarela, tabuleiro));
-
-                Tela.ImprimirTabuleiro(tabuleiro);
+                    partida.ExecutaMovimento(origem, destino);
+                }
             }
             catch (TabuleiroException ex)
             {
