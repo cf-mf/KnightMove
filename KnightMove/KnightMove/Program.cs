@@ -23,7 +23,7 @@ namespace KnightMove
 
                 tabuleiro.ColocarPeca(new Posicao(0, 0), new Torre(Cor.Branca, tabuleiro));
                 tabuleiro.ColocarPeca(new Posicao(0, 3), new Torre(Cor.Branca, tabuleiro));
-                tabuleiro.ColocarPeca(new Posicao(2, 2), new Rei(Cor.Branca, tabuleiro));
+                tabuleiro.ColocarPeca(new Posicao(2, 2), new Rei(Cor.Amarela, tabuleiro));
 
                 Tela.ImprimirTabuleiro(tabuleiro);
             }
