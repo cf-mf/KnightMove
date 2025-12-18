@@ -1,5 +1,4 @@
-﻿using System;
-using Tabuleiro;
+﻿using Tabuleiro;
 using Xadrez;
 
 namespace KnightMove
@@ -43,7 +42,7 @@ namespace KnightMove
         public static void ImprimirConjunto(HashSet<Peca> conjunto)
         {
             Console.Write("[ ");
-            foreach(Peca x in conjunto)
+            foreach (Peca x in conjunto)
             {
                 Console.Write(x + " ");
             }
@@ -93,10 +92,18 @@ namespace KnightMove
 
         public static PosicaoXadrez LerPosicaoXadrez()
         {
-            string s = Console.ReadLine();
-            char coluna = s[0];
-            int linha = int.Parse(s[1] + "");
-            return new PosicaoXadrez(coluna, linha);
+            string s = Console.ReadLine().ToLower();
+            if (!string.IsNullOrEmpty(s) && s.Length == 2 && char.IsLetter(s[0]) && char.IsDigit(s[1]))
+            {
+                char coluna = s[0];
+                int linha = int.Parse(s[1] + "");
+                if (coluna < 'a' || coluna > 'h' || linha < 1 || linha > 8)
+                {
+                    throw new TabuleiroException("Posição inválida! Use o formato letra+número (ex: e2) entre A-H e 1–8.");
+                }
+                return new PosicaoXadrez(coluna, linha);
+            }
+            throw new TabuleiroException("Origem inválida!");
         }
 
         public static void ImprimirPeca(Peca peca)

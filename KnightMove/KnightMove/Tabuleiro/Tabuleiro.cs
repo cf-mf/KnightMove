@@ -32,14 +32,14 @@
         public void ColocarPeca(Posicao pos, Peca p)
         {
             if (ExistePeca(pos)) throw new TabuleiroException("Já existe uma peça nessa posição!");
-            
+
             Pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
         }
 
         public Peca RetirarPeca(Posicao pos)
         {
-            if(Peca(pos) == null)
+            if (Peca(pos) == null)
             {
                 return null;
             }
@@ -51,13 +51,13 @@
 
         public bool PosicaoValida(Posicao pos)
         {
-            if(pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas) return false; 
+            if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas) return false;
             return true;
         }
 
         public void ValidarPosicao(Posicao pos)
         {
-            if(!PosicaoValida(pos)) throw new TabuleiroException("Posição inválida!");
+            if (!PosicaoValida(pos)) throw new TabuleiroException("Posição inválida!");
         }
     }
 }

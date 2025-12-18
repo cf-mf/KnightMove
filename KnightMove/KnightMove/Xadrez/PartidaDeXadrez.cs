@@ -1,5 +1,4 @@
 ﻿using KnightMove.Xadrez;
-using System;
 using Tabuleiro;
 
 namespace Xadrez
@@ -60,12 +59,12 @@ namespace Xadrez
             }
 
             //#jogadaespecial en passant
-            if(p is Peao)
+            if (p is Peao)
             {
-                if(origem.Coluna != destino.Coluna && pecaCapturada == null)
+                if (origem.Coluna != destino.Coluna && pecaCapturada == null)
                 {
                     Posicao posP;
-                    if(p.Cor == Cor.Branca)
+                    if (p.Cor == Cor.Branca)
                     {
                         posP = new Posicao(destino.Linha + 1, destino.Coluna);
                     }
@@ -113,13 +112,13 @@ namespace Xadrez
             }
 
             //#jogadaespecial en passant
-            if(p is Peao)
+            if (p is Peao)
             {
                 if (origem.Coluna != destino.Coluna && pecaCapturada == vulneravelEnPassant)
                 {
                     Peca peao = Tab.RetirarPeca(destino);
                     Posicao posP;
-                    if(p.Cor == Cor.Branca)
+                    if (p.Cor == Cor.Branca)
                     {
                         posP = new Posicao(3, destino.Coluna);
                     }
@@ -145,9 +144,9 @@ namespace Xadrez
             Peca p = Tab.Peca(destino);
 
             //#jogadaespecial promocao
-            if(p is Peao)
+            if (p is Peao)
             {
-                if((p.Cor == Cor.Branca && destino.Linha == 0) || (p.Cor == Cor.Preta && destino.Linha == 7))
+                if ((p.Cor == Cor.Branca && destino.Linha == 0) || (p.Cor == Cor.Preta && destino.Linha == 7))
                 {
                     p = Tab.RetirarPeca(destino);
                     Pecas.Remove(p);

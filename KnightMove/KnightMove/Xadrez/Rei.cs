@@ -85,7 +85,7 @@ namespace KnightMove.Xadrez
             }
 
             //#jogadaespecial roque
-            if(QtdMovimentos == 0 && !Partida.Xeque)
+            if (QtdMovimentos == 0 && !Partida.Xeque)
             {
                 //#jogadaespecial roque pequeno
                 Posicao posT1 = new Posicao(Posicao.Linha, Posicao.Coluna + 3);
@@ -93,7 +93,7 @@ namespace KnightMove.Xadrez
                 {
                     Posicao p1 = new Posicao(Posicao.Linha, Posicao.Coluna + 1);
                     Posicao p2 = new Posicao(Posicao.Linha, Posicao.Coluna + 2);
-                    if(Tabuleiro.Peca(p1) == null && Tabuleiro.Peca(p2) == null)
+                    if (Tabuleiro.Peca(p1) == null && Tabuleiro.Peca(p2) == null)
                     {
                         mat[Posicao.Linha, Posicao.Coluna + 2] = true;
                     }
@@ -105,7 +105,7 @@ namespace KnightMove.Xadrez
                     Posicao p1 = new Posicao(Posicao.Linha, Posicao.Coluna - 1);
                     Posicao p2 = new Posicao(Posicao.Linha, Posicao.Coluna - 2);
                     Posicao p3 = new Posicao(Posicao.Linha, Posicao.Coluna - 3);
-                    if(Tabuleiro.Peca(p1) == null && Tabuleiro.Peca(p2) == null && Tabuleiro.Peca(p3) == null)
+                    if (Tabuleiro.Peca(p1) == null && Tabuleiro.Peca(p2) == null && Tabuleiro.Peca(p3) == null)
                     {
                         mat[Posicao.Linha, Posicao.Coluna - 2] = true;
                     }

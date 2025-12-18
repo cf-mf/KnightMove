@@ -1,5 +1,4 @@
-﻿using KnightMove.Xadrez;
-using Tabuleiro;
+﻿using Tabuleiro;
 using Xadrez;
 
 namespace KnightMove
@@ -20,7 +19,7 @@ namespace KnightMove
                         Tela.ImprimirPartida(partida);
 
                         Console.WriteLine();
-                        Console.Write("Origem: ");
+                        Console.Write("Posição de origem: ");
                         Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
                         partida.ValidarPosicaoDeOrigem(origem);
 
@@ -30,7 +29,7 @@ namespace KnightMove
                         Tela.ImprimirTabuleiro(partida.Tab, posicoesPossiveis);
 
                         Console.WriteLine();
-                        Console.Write("Destino: ");
+                        Console.Write("Posição de destino: ");
                         Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
                         partida.ValidarPosicaoDeDestino(origem, destino);
 

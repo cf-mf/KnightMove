@@ -27,9 +27,10 @@ namespace KnightMove.Xadrez
 
             //acima
             pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna);
-            while(Tabuleiro.PosicaoValida(pos) && PodeMover(pos)) {
+            while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
+            {
                 mat[pos.Linha, pos.Coluna] = true;
-                if(Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(pos).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(pos).Cor != Cor)
                 {
                     break;
                 }
@@ -37,9 +38,10 @@ namespace KnightMove.Xadrez
             }
             //abaixo
             pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna);
-            while(Tabuleiro.PosicaoValida(pos) && PodeMover(pos)) {
+            while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
+            {
                 mat[pos.Linha, pos.Coluna] = true;
-                if(Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(pos).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(pos).Cor != Cor)
                 {
                     break;
                 }
@@ -47,9 +49,10 @@ namespace KnightMove.Xadrez
             }
             //direita
             pos.DefinirValores(Posicao.Linha, Posicao.Coluna + 1);
-            while(Tabuleiro.PosicaoValida(pos) && PodeMover(pos)) {
+            while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
+            {
                 mat[pos.Linha, pos.Coluna] = true;
-                if(Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(pos).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(pos).Cor != Cor)
                 {
                     break;
                 }
@@ -57,9 +60,10 @@ namespace KnightMove.Xadrez
             }
             //esquerda
             pos.DefinirValores(Posicao.Linha, Posicao.Coluna - 1);
-            while(Tabuleiro.PosicaoValida(pos) && PodeMover(pos)) {
+            while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
+            {
                 mat[pos.Linha, pos.Coluna] = true;
-                if(Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(pos).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(pos).Cor != Cor)
                 {
                     break;
                 }
