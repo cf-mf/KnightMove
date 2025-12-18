@@ -43,6 +43,8 @@ namespace KnightMove
                         Console.ReadLine();
                     }
                 }
+                Console.Clear();
+                Tela.ImprimirPartida(partida);
             }
             catch (TabuleiroException ex)
             {
